@@ -105,7 +105,7 @@ section.top h1 {font-size:28px;}
 
 
 /*================== Статья ==========================*/
-section.articlewrap {padding: 10px 400px 50px 20px; margin:0 auto; min-height:85vh; max-width:1200px; background:transparent; text-align:left; position:relative; box-sizing: border-box;}
+section.articlewrap {padding: 10px 400px 50px 20px; margin:0 auto; min-height:86vh; max-width:1200px; background:transparent; text-align:left; position:relative; box-sizing: border-box;}
 .fullwidtharticle {margin-right:-380px;}
 .halffullwidtharticle {margin-right:-200px;}
 .sidenote {position:absolute; right:20px; width:280px; font-size:65%; margin-top:15px; line-height:150%;}
