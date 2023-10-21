@@ -1,0 +1,77 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+
+const { title, h1, description, keywords, section, section_url, url, img } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta content={description} property="og:description" name="Description" />
+	<meta content={`${keywords}, i love kg, ilovekg, i❤️kg, ilovekg.com, Киргизия, Кыргызстан, путеводитель` }   name="Keywords" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="/css/style.css?13" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/0/ogimg/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/0/ogimg/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/0/ogimg/favicon-16x16.png" />
+	<meta name="yandex-tableau-widget" content="logo=/images/0/ogimg/ya-logo.png, color=#ffffff" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={`https://ilovekg.com/${section_url}${url ? '/' + url + '/' : '/'}`} />
+	<meta property="og:image" content="https://ilovekg.com/images/0/ogimg/ogimage-1200x630.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<link rel="canonical" href={`https://ilovekg.com/${section_url}${url ? '/' + url + '/' : '/'}`} />
+</head>
+
+<body itemscope itemtype="http://schema.org/Article">
+
+<Header/>
+
+<section class="articlewrap"><article itemprop="articleBody">
+
+{h1 && <h1  class="fullwidtharticle">{h1}</h1>}
+
+{section_url && img && <p class="fullwidtharticle"><img src={`/images/${section_url}/${img}`} alt={title}/></p>}
+
+<slot />
+
+<div itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumbs">
+	<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="/">
+			<span itemprop="name">Главная</span>
+		</a>
+		<meta itemprop="position" content="1" />
+	</span>
+
+	{section_url && 
+		<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			→
+			<a itemprop="item" href={`/${section_url}/`}>
+				<span itemprop="name">{section}</span>
+			</a>
+			<meta itemprop="position" content="2" />
+		</span>
+	}
+	
+	{section_url && url && 
+		<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			→	
+			<a itemprop="item" href={`/${section_url}/${url}/`}>
+				<span itemprop="name">{title}</span>
+			</a>
+			<meta itemprop="position" content="3" />
+		</span>
+	}
+</div>
+
+</article></section>
+<Footer />
+
+</body>
+</html>

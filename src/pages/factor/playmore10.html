@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="/css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.flexquize {max-width: 800px;  box-shadow: 0 0 30px rgb(0 0 0 / 20%);  margin: 10px auto;  border-radius: 20px;  min-height: 200px; font-family: 'Open Sans', sans-serif; text-align:center;}
+#flexquizetop {display:flex; align-items:center; justify-content:center; padding:10px;}
+#flexquizetop label, #flexquizetop input {display:block; padding:10px; margin:0; width:70px; color: gray; }
+#flexquizetop label {width:15px;}
+.primer {padding:0 30px 30px; }
+.primertitle {line-height:100%; font-size:50px; padding:20px; font-weight:600;}
+.primeroptions {display:flex; align-items:center; justify-content:center; flex-wrap: wrap;}
+.primeroption {line-height:100%; cursor:pointer; display: block;  padding: 28px 20px; margin: 3px 3px; width:23%; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 700; border-radius: 10px; text-align: center;  background: rgba(0,0,0,0.04);  box-sizing: border-box;}
+.ifoflex {padding:20px; display:block; padding: 25px 10px; border-bottom-left-radius: 20px;  border-bottom-right-radius: 20px;
+font-size: 24px; color: gray;  display:none; }
+#nextone { background: rgba(0,100,250,0.9); color:white;  cursor:pointer;}
+
+@media screen and (max-width: 800px) {
+.primer {padding:20px;}
+.primertitle {font-size:36px; margin-bottom: 15px;}
+.primeroption {width:48%;  padding: 20px 6px; font-size: 20px;}	
+.ifoflex { font-size: 20px; padding: 17px 10px; margin-top: 10px;}
+}
+</style>
+
+  <body onload="generateTest()">
+  <div class="flexquize">
+	<div id="flexquizetop">
+		<label for="start">От:</label><input type="number" id="start" name="start" class="input" value="10" oninput="generateTest()">
+		<label for="end">До:</label><input type="number" id="end" name="end" class="input" value="20" oninput="generateTest()">
+	</div>
+    <div id="test"></div>
+	<div class="ifoflex" id="nextone" onclick="generateTest()">Дальше 👉</div>
+	<div class="ifoflex" id="chooseone">Ответь 👆</div>
+  </div>
+	
+	
+<script>
+function generateTest() {
+  const start = Number(document.getElementById("start").value);
+  const end = Number(document.getElementById("end").value);
+  const optionsSize = 8;
+  
+  let test = "";
+  
+  if (start >= end) {
+	test = "<div class='primertitle'>От " + start + " и до " + end + ". Ты серьезно?</div>";
+  } else {
+
+	const a = Math.floor(Math.random() * (end - start + 1)) + start;
+	const b = Math.floor(Math.random() * (end - start + 1)) + start;
+	const answer = a * b;
+	const options = [answer];
+	while (options.length < optionsSize) {
+	  const option = Math.floor(Math.random() * (end * end - start * start + 1)) + start * start;
+	  if (options.indexOf(option) === -1) {
+		options.push(option);
+	  }
+	}
+	options.sort(() => Math.random() - 0.5);
+
+	test += "<div class='primer'>";
+	test += "<div class='primertitle'>" + a + " × " + b + "&nbsp;=" + "</div><div class='primeroptions'>";
+	for (let j = 0; j < optionsSize; j++) {
+	  test += "<div class='primeroption' onclick='checkAnswer(this," + answer + ")'>" + options[j] + "</div> ";
+	}
+	test += "</div></div>";
+
+  }
+
+  document.getElementById("test").innerHTML = test;
+  document.getElementById("nextone").style.display = "none";
+  document.getElementById("chooseone").style.display = "block";
+}
+
+function checkAnswer(button, answer) {
+  const buttons = button.parentNode.getElementsByClassName("primeroption");
+  for (let i = 0; i < buttons.length; i++) {
+	buttons[i].disabled = true;
+	if (buttons[i].textContent == answer) {
+	  buttons[i].style.backgroundColor = "lightgreen";
+	}
+  }
+  button.style.backgroundColor = (button.textContent == answer) ? "lightgreen" : "pink";
+  document.getElementById("nextone").style.display = "block";
+  document.getElementById("chooseone").style.display = "none";
+}
+
+</script>

@@ -1,0 +1,13 @@
+---
+export interface Props {
+	question: string;
+	answer: string;
+}
+
+const { question, answer } = Astro.props;
+---
+
+<div itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+	<h3 itemprop="name">{question}</h3>
+	<p itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer"><span itemprop="text">{answer}</span></p>
+</div>

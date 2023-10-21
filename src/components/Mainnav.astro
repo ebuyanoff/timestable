@@ -1,0 +1,18 @@
+---
+export interface Props {
+	icon: string;
+	url: string;
+	calcname: string;
+	calcdesc: string;
+}
+
+const { icon, url, calcname, calcdesc } = Astro.props;
+---
+
+<a href={url} class="calcitem study">
+	<span class="material-symbols-rounded">{icon}</span>
+	<div class="calcalltext">
+		<div class="calcname">{calcname}</div>
+		<div class="calcdesc">{calcdesc}</div>
+	</div>	
+</a>
