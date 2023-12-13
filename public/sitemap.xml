@@ -1,316 +1,326 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
 <url>
   <loc>https://timestable.ru/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/games/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/study/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/history/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/photo/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/video/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://timestable.ru/train/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/poetry/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/about/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/contact/</loc>
-  <lastmod>2023-10-11</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/study/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://timestable.ru/print/</loc>
-  <lastmod>2023-10-13</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/games/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://timestable.ru/types/</loc>
-  <lastmod>2023-10-14</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/poetry/usachev/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/history/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/poetry/kazarina/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/photo/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/poetry/sobakin/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/video/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/poetry/trofimov/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/poetry/prok/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/poetry/music/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/history/who/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/history/facts/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/20-30-100/</loc>
-  <lastmod>2023-10-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/0/</loc>
-  <lastmod>2023-10-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/1/</loc>
-  <lastmod>2023-10-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/2/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/3/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/4/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/5/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/6/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/7/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/8/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/9/</loc>
-  <lastmod>2023-10-06</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/10/</loc>
-  <lastmod>2023-10-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/11/</loc>
-  <lastmod>2023-10-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/factor/12/</loc>
-  <lastmod>2023-10-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/history/tableday/</loc>
-  <lastmod>2023-10-07</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/photo/memes/</loc>
-  <lastmod>2023-10-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/poetry/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://timestable.ru/study/laws/</loc>
-  <lastmod>2023-10-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/study/prop/</loc>
-  <lastmod>2023-10-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/history/who/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://timestable.ru/study/multiplication/</loc>
-  <lastmod>2023-10-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/types/china/</loc>
-  <lastmod>2023-10-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/types/japan/</loc>
-  <lastmod>2023-10-08</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/study/slides/</loc>
-  <lastmod>2023-10-09</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/games/monkey/</loc>
-  <lastmod>2023-10-16</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/study/fingers/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/study/why/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/types/degree/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/types/fraction/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/types/reduction/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
-  <loc>https://timestable.ru/types/column/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <loc>https://timestable.ru/history/tableday/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://timestable.ru/print/cards/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/study/multiplication/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/study/slides/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/study/fingers/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/study/why/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/20-30-100/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/poetry/music/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/poetry/usachev/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/types/china/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/study/prop/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://timestable.ru/study/threedays/</loc>
-  <lastmod>2023-10-10</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
-</urlset> 
+<url>
+  <loc>https://timestable.ru/games/monkey/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/0/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/1/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/2/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/3/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/4/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/5/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/6/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/7/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/8/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/9/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/10/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/11/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/factor/12/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/types/japan/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/types/degree/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/types/fraction/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/types/reduction/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/types/column/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/history/facts/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/poetry/kazarina/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/poetry/sobakin/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/poetry/trofimov/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/poetry/prok/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/photo/memes/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/about/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/docs/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/contact/</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/allcards.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/gor1.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/vert1.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/gor2.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/vert2.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/gor3.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/vert3.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/vert4.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/cards/vert5.pdf</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://timestable.ru/images/present/all.pptx</loc>
+  <lastmod>2023-12-13T09:53:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
