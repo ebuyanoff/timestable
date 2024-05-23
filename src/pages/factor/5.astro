@@ -1,5 +1,7 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
+import Calculator from '../../components/timestrainer'
+import MultiplicationTable from '../../components/table'
 ---
 
 <Layout_article
@@ -10,12 +12,10 @@ keywords="Умножение на 5"
 url="5"
 section="Множители"
 section_url="factor"
-img="0.png"
+
 >
 
-Умножение на 5" />
-<meta content='Как умножать и делить на пять – правила, примеры с ответами, таблицы, карточки и тренажёры.' property="og:description" name="Description"/>
-<meta content='умножение на 5, умножение и деление на 5, пять, число, 2 класс, 3 класс, 4 класс, примеры, карточки, распечатать, таблица умножения, табличное умножение, тренажер, контрольная работа, тест, задачи, выполните умножение, с ответами, проверочная, презентация, конспект, урок, тема, свойства умножения, timestable, математика' name="Keywords"/>
+<MultiplicationTable client:load yellowString="5" redCells={[[0,0]]}/>
 
 
 <p><strong>Содержание страницы:</strong></p>
@@ -43,11 +43,18 @@ img="0.png"
 
 <p>Или ещё пример, у одного стула 4 ножки.&nbsp;Сколько всего ножек&nbsp;у 5 стульев? Попробуйте найти ответ самостоятельно в таблице умножения:</p>
 
-<? echo file_get_contents('https://timestable.ru/blocks/intable/');?>
+<MultiplicationTable client:load yellowString="" redCells={[[0,0]]}/>
 
-<p class="btnopen">Верный ответ</p>
+<p class="btnopen">Узнать правильный ответ</p>
 
-<p class="blockopen">Правильный ответ: 4 &times; 5 = 4 + 4 + 4 + 4 + 4 = 20</p>
+<div class="blockopen">
+	<p><b>Правильный ответ:</b> 4 &times; 5 = 4 + 4 + 4 + 4 + 4 = 20</p>
+	<MultiplicationTable client:load yellowString="" redCells={[[5,4]]}/>
+</div>
+
+
+
+
 
 <h2 id="2">Свойства и правила</h2>
 
@@ -61,7 +68,7 @@ img="0.png"
 
 <h2 id="3">Тренажёр таблицы на 5</h2>
 
-<? echo file_get_contents('https://timestable.ru/train/play.html');?><script>const $select = document.querySelector('#quizelevel');$select.value = '5';</script>
+<Calculator client:load initialLang='ru' defaultMultipliers={[5]} defaultStart={1} defaultEnd={10} />
 
 <p>Чтобы потренироваться в умножении на 5, вы можете использовать специальный тренажёр. Просто дайте его ребёнку, чтобы он позанимался и объясните простые правила.</p>
 

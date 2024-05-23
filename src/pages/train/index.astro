@@ -1,5 +1,7 @@
 ---
-import Layout_article from '../../layouts/Layout_article.astro'
+import Layout_article from '../../layouts/Layout_article.astro';
+import Calculator from '../../components/timestrainer'
+import MultiplicationTable from '../../components/table'
 ---
 
 <Layout_article
@@ -12,7 +14,8 @@ section_url="train"
 >
 
 
-<iframe src="https://calcopedia.com/timestable/page" style="margin:20px 0;height:600px;width:100%;max-width:800px;border:none;"></iframe>
+<Calculator client:load initialLang='ru' defaultMultipliers={[]} defaultStart={1} defaultEnd={10} />
+
 
 
 <h3>Содержание</h3>
@@ -106,6 +109,8 @@ section_url="train"
 <p>Уверены, вам хватит времени, чтобы помочь своему ребенку запомнить таблицу умножения навсегда.</p>
 
 <h2 id="3">📄 Что еще важно знать?</h2>
+
+<MultiplicationTable client:load yellowString="" redCells={[[0,0]]}/>
 
 <p>Особую важность занимает вопрос концентрации внимания и многозадачности в процессе изучения чего-либо. А когда речь идет о детях, тема становится еще более актуальной.</p>
 

@@ -1,5 +1,6 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
+import Calculator from '../../components/timestrainer'
 ---
 
 <Layout_article
@@ -51,7 +52,7 @@ img="12.png"
 
 <h2 id="3">Тренажёр</h2>
 
-<? echo file_get_contents('https://timestable.ru/train/play.html');?><script>const $select = document.querySelector('#quizelevel');$select.value = '12';</script>
+<Calculator client:load initialLang='ru' defaultMultipliers={[12]} defaultStart={1} defaultEnd={12} />
 
 <p>Чтобы потренироваться в умножении на 12, вы можете использовать специальный тренажёр. Просто дайте его ребёнку, чтобы он позанимался и объясните простые правила.</p>
 
@@ -107,6 +108,7 @@ img="12.png"
 <p class="btnopen">Узнать ответ</p>
 
 <p class="blockopen">Ответ: 12 &times; 9 = 108 пуговиц.</p>
+
 
 <h3>Умножение и деление на 12</h3>
 

@@ -1,5 +1,7 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
+import Calculator from '../../components/timestrainer'
+import MultiplicationTable from '../../components/table'
 ---
 
 <Layout_article
@@ -10,8 +12,10 @@ keywords="Умножение на 10, множители таблицы умно
 url="10"
 section="Множители"
 section_url="factor"
-img="10.png"
+
 >
+
+<MultiplicationTable client:load yellowString="10" redCells={[[0,0]]}/>
 
 <h2>Умножение целого числа на 10</h2>
 
@@ -51,7 +55,7 @@ img="10.png"
 
 <p>А теперь давайте проверим, как вы освоили эту тему.</p>
 
-<? echo file_get_contents('https://timestable.ru/train/play.html');?><script>const $select = document.querySelector('#quizelevel');$select.value = '10';</script>
+<Calculator client:load initialLang='ru' defaultMultipliers={[10]} defaultStart={1} defaultEnd={100} />
 
 <p>Материалы про другие множители доступны по ссылкам:</p>
 

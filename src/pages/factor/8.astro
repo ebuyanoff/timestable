@@ -1,5 +1,7 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
+import Calculator from '../../components/timestrainer'
+import MultiplicationTable from '../../components/table'
 ---
 
 <Layout_article
@@ -10,8 +12,10 @@ keywords="умножение на 8, умножение и деление на 8
 url="8"
 section="Множители"
 section_url="factor"
-img="8.jpg"
+
 >
+
+<MultiplicationTable client:load yellowString="8" redCells={[[0,0]]}/>
 
 <p><strong>Содержание:</strong></p>
 
@@ -38,11 +42,20 @@ img="8.jpg"
 
 <p>Или ещё пример, у одного стула 4 ножки.&nbsp;Сколько всего ножек&nbsp;у 8 стульев? Попробуйте найти ответ самостоятельно в таблице умножения:</p>
 
-<? echo file_get_contents('https://timestable.ru/blocks/intable/');?>
 
-<p class="btnopen">Узнать верный ответ</p>
+<MultiplicationTable client:load yellowString="" redCells={[[0,0]]}/>
 
-<p class="blockopen">Правильный ответ: 8 &times; 4 = 32.</p>
+<p class="btnopen">Узнать правильный ответ</p>
+
+<div class="blockopen">
+	<p><b>Правильный ответ:</b> 8 &times; 4 = 32.</p>
+	<MultiplicationTable client:load yellowString="" redCells={[[8,4]]}/>
+</div>
+
+
+
+
+
 
 <h2 id="2">Свойства и правила</h2>
 
@@ -55,7 +68,7 @@ img="8.jpg"
 
 <h2 id="3">Тренажёр для тренировки</h2>
 
-<? echo file_get_contents('https://timestable.ru/train/play.html');?><script>const $select = document.querySelector('#quizelevel');$select.value = '8';</script>
+<Calculator client:load initialLang='ru' defaultMultipliers={[8]} defaultStart={1} defaultEnd={10} />
 
 <p>Чтобы потренироваться в умножении на 8, вы можете использовать специальный тренажёр. Просто дайте его ребёнку, чтобы он позанимался и объясните простые правила.</p>
 

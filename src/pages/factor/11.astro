@@ -1,5 +1,6 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
+import Calculator from '../../components/timestrainer'
 ---
 
 <Layout_article
@@ -10,7 +11,7 @@ keywords="Умножение на 11, множители таблицы умно
 url="11"
 section="Множители"
 section_url="factor"
-img="0.png"
+img="11.png"
 >
 
 
@@ -82,7 +83,7 @@ img="0.png"
 
 <p>А теперь давайте проверим, как вы освоили эту тему.</p>
 
-<? echo file_get_contents('https://timestable.ru/train/play.html');?><script>const $select = document.querySelector('#quizelevel');$select.value = '11';</script>
+<Calculator client:load initialLang='ru' defaultMultipliers={[11]} defaultStart={1} defaultEnd={99} />
 
 <p>Материалы про другие множители доступны по ссылкам:</p>
 

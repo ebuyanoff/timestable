@@ -1,5 +1,6 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
+import Calculator from '../../components/timestrainer'
 ---
 
 <Layout_article
@@ -253,8 +254,6 @@ section_url="factor"
 
 <h3>Умножение на 11</h3>
 
-<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@evgeny.buyanov/video/7052301935633845506" data-video-id="7052301935633845506" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@evgeny.buyanov" href="https://www.tiktok.com/@evgeny.buyanov?refer=embed">@evgeny.buyanov</a> <p>Знали?</p> <a target="_blank" title="♬ Gravity Falls Intro (Electro) - Blaze Blue" href="https://www.tiktok.com/music/Gravity-Falls-Intro-Electro-6732211081508292609?refer=embed">♬ Gravity Falls Intro (Electro) - Blaze Blue</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-
 <p>Существует простой способ умножения на 11. Например, чтобы умножить 27 на 11 нужно:</p>
 
 <ol>
@@ -301,11 +300,11 @@ section_url="factor"
 
 <h2 id="9">Тренажёр умножения больших чисел</h2>
 
+<Calculator client:load initialLang='ru' defaultMultipliers={[]} defaultStart={1} defaultEnd={100} />
+
 <p>Тренажер на умножение больших чисел - это инструмент, который поможет вам улучшить навыки умножения больших чисел и повысить свою математическую грамотность. Умножение - это одна из самых важных операций в математике, и овладение этим навыком поможет вам в решении различных задач как в повседневной жизни, так и в профессиональной деятельности.</p>
 
 <p>Тренажер на умножение больших чисел предлагает различные уровни сложности, начиная от умножения двух двузначных чисел и заканчивая умножением нескольких шестизначных чисел. Таким образом, вы можете выбрать уровень, который соответствует вашим навыкам и потребностям.</p>
-
-<? echo file_get_contents('playmore10.html');?>
 
 
 </Layout_article>

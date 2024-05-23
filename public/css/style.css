@@ -166,12 +166,11 @@ h2 a {text-decoration:none; color:black;}
 .videowrap:before{ content: "";  display: block;  padding-top:56%; }
 .videowrap iframe {display:block; position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%;}
 
-.speaktable {margin:50px 0; width:100%; border-collapse: collapse; border-radius: 10px;}
-.speaktable td {border-top:1px dotted rgb(230, 230, 230); padding: 5px; vertical-align:top;}
-.speaktable tr:hover td {background:rgba(240, 245, 255, 1);  scale: 1.04; cursor:pointer;}
-.speaktable td, .speaktable tr:hover td {-webkit-transition: all .1s ease-in; transition: all .1s ease-in;}
-.speaktable tr:first-child td {border:none;}
-.speaktable td:first-child span {display:block; color:rgb(139, 139, 139); font-size:80%;}
+.btnopen {display:inline-block;  font-weight:500; text-decoration:none; box-shadow:0 0 15px rgba(0,0,0,0.1); border-radius:10px; padding:10px 30px; margin:25px 0 10px;  font-size:18px; min-width:150px; text-align:center; box-sizing:border-box; cursor:pointer; background: #0094ff; color:white;}
+.btnopen:hover {box-shadow:0 0 25px rgba(0,0,0,0.2); background: #0880d8; color:white; }
+.btnopen, .btnopen:hover {-webkit-transition: all .2s ease-in; transition: all .2s ease-in;}
+.blockopen {display:none;}
+.blockopen.active {display:block; padding:25px 25px; margin:15px 0 25px; background:rgba(0,30,70,0.04); border-radius:4px;}
 
 @media screen and (max-width: 800px) {
 h1, h1.whitelabel input{font-size:28px;}
@@ -246,3 +245,74 @@ footer .wrapper {margin:20px 4%; display:block; }
 footer .fmenu {margin:15px;}
 footer .fmenu a.fmenuitem {margin:2px; padding:7px;}
 }
+
+/*================== ФОРМЫ ==========================*/
+label, .label {display:block; text-align:left; margin:12px 0 0; }
+label > span, .label > span {display:block; font-size: 13px; color: rgba(0,0,0,0.6); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width:100%;}
+
+/*Текстовые инпуты*/
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea, .divtextarea {background:white; padding:15px 15px; width:100%; border-radius:6px; margin:2px 0; font-size:16px; font-weight:400; box-sizing:border-box; outline:none; -webkit-transition:all .1s ease-in; transition:all .1s ease-in; font-family:'Open Sans', sans-serif; min-height:54px; border:none;}
+
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover, select:hover, .divtextarea:hover {border:none;}
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus, select:focus, .divtextarea:focus {border:none; outline:none; border:none; -webkit-transition:all .1s ease-in; transition:all .1s ease-in;}
+
+/*Textarea*/
+.calctextarea textarea {min-height:250px;}
+textarea, .divtextarea {min-width:100%; max-width:100%; font-size: 16px; font-weight:400; line-height:140%;}
+input[type="checkbox"],input[type="image"],input[type="radio"] {width: auto;}
+input::placeholder,textarea::placeholder {color: #c7c7c7; opacity: 1;	font-weight: 400; line-height:140%; font-family: 'Open Sans', sans-serif; }
+	
+/*Селекты*/
+.select { position: relative; cursor:pointer; margin:2px 0;  }
+.select:before {content: ""; position: absolute;  top:0; left:0; right:0; bottom:0; z-index:0; background:white; border-radius: 6px;}
+.select:after { content: "";  position: absolute;  right: 14px;  top: 50%; margin-top:-2px; z-index:1; border: 4px solid transparent; border-top: 5px solid rgba(120,120,120,1);}
+.select select { position: relative;  background:transparent; padding-right: 25px;  -webkit-appearance: none;  -moz-appearance: none;  appearance: none; z-index:2; overflow:hidden; margin:0;}
+
+/*Тесты*/
+.flexquize {position: relative; max-width: 800px;  box-shadow: 0 0 30px rgb(0 30 50 / 8%);  margin: 30px auto;  border-radius: 12px;  min-height: 200px; font-family: 'Open Sans', sans-serif; text-align:center;}
+.flexquizequest {padding:40px 5% 20px; font-size:24px; font-weight: bold; text-align:left;}
+.flexquizanswer {width:calc(90%); box-sizing: border-box; padding:15px 4%; margin:2px 5%; border:none; text-align:left; border-radius: 8px; cursor:pointer; background:rgba(245, 245, 245, 0.5); font-size:18px;}
+.flexquizanswer:hover {background:rgba(245, 245, 245, 0.75);}
+.flexquizanswer:disabled {color:black;}
+.flexquizanswer:last-child {margin-bottom:50px; }
+.flexquizecomment {padding:12px 5%; margin-top:-40px; color:gray; text-align:left;}
+
+/*Тренажёр умножения*/
+#flexquizetop {display:flex; align-items:center; justify-content:center; padding:10px;}
+#flexquizetop label, #flexquizetop input, #flexquizetop select {display:block; padding:8px; margin:0; width:60px; color: gray; }
+#flexquizetop label {padding:10px 0px; text-align:right; width:auto;}
+.primer {padding:0 30px 30px; }
+.primertitle {line-height:100%; font-size:50px; padding:20px; font-weight:600;}
+.primeroptions {display:flex; align-items:center; justify-content:center; flex-wrap: wrap;}
+.primeroption {line-height:100%; cursor:pointer; display: block;  padding: 28px 20px; margin: 3px 3px; width:23%; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 700; border-radius: 10px; text-align: center;  background: rgba(0,0,0,0.04);  box-sizing: border-box;}
+.ifoflex {padding:20px; display:block; padding: 25px 10px; border-radius: 0 0 12px 12px; font-size: 24px; color: gray; }
+#nextone { background: rgba(0,100,250,0.9); color:white;  cursor:pointer;}
+.alertmultinfo {font-size:20px; padding:35px 10px;}
+#flexquizetop #firstmult {width:43px; color: gray; padding:2px; min-height:0; background:rgba(245, 245, 245, 0.0); margin:0 0 0 5px; text-align: center;}
+#flexquizetop #firstmult:hover {background:rgba(245, 245, 245, 0.5);}
+.incorrect  {color:rgb(225, 5, 5);}
+.correct {background:rgb(122, 231, 149);}
+
+@media screen and (max-width: 800px) {
+.primer {padding:20px;}
+.primertitle {font-size:36px; margin-bottom: 15px;}
+.primeroption {width:48%;  padding: 20px 6px; font-size: 20px;}	
+.ifoflex { font-size: 20px; padding: 24px 10px; margin-top: 10px;}
+}
+
+/*Таблица умножения*/
+.multiplicationTable { border-collapse: collapse; width:100%; margin:30px 0 4px;}
+.multiplicationTable td { position:relative; border: 1px solid white; background: rgb(104, 124, 144, 0.08); padding: 8px; text-align: center; border-radius:5px; overflow: hidden;}
+.highlight::after, .yellowstring.highlight::after, .bluestring.highlight::after, .redcell.highlight::after{ position: absolute; content: ''; top:0; bottom:0; right:0; left:0; background-color: rgba(0, 0, 0, 0.08); }
+.multiplicationTable .yellowstring { background-color: rgb(242, 242, 117); }
+.multiplicationTable .bluestring { background-color: rgb(201, 237, 249); }
+.multiplicationTable .redcell { background-color: rgb(255, 180, 180); }
+.multiplicationExample {padding:15px; text-align:center; min-height:20px; background-color: rgb(230 , 235, 240); line-height:100%; border-radius:5px; font-size:20px; font-weight:bold;}
+
+@media screen and (max-width: 800px) {
+    .multiplicationTable td {padding: 5px;}
+}
+
+/*Вспомогательные классы умножения*/
+.chetnye {color:gray;}
+.chetnye strong {color:rgb(0, 54, 215);}

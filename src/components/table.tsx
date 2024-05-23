@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 
 const MultiplicationTable = ({ yellowString, redCells = [] }: {yellowString: string, redCells: number[][] }) => {
