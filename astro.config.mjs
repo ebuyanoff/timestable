@@ -7,6 +7,8 @@ import react from "@astrojs/react";
 export default defineConfig({
   site: 'https://timestable.ru',
   integrations: [
-  react()],
+  react(),
+  sitemap()
+],
   
 });
