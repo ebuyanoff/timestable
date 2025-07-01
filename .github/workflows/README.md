@@ -35,6 +35,7 @@ ns1.yandexcloud.net
 ns2.yandexcloud.net
 
 # YC Certificete manager
+Создать сертификат => Cертификат от Let’s Encrypt
 SSL => Создать сертификат (DNS)
 Далее можно создать CNAME или TXT запись.
 
