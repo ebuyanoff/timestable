@@ -7,12 +7,10 @@
 Создать платёжный аккаунт и привязать карту
 
 # YC Object Storage
-https://console.yandex.cloud/folders/b1g4mt8s1172nelgi24u/storage/buckets 
 Создать бакет: доступ на чтение – публичный, остальное – нет. ecalc.ru – точно по имени домена. Отдельный бакет для каждого сайта.
 Настройки  => Веб-сайт => Хостинг (index.html 404.html)
 
 # YC Identity and access management (1 раз)
-https://console.yandex.cloud/folders/b1g4mt8s1172nelgi24u/iam/service-accounts 
 Создать сервисный аккаунт без роли (единый для всех). Захожу в него, создать новый ключ => статический ключ доступа => скопировать СРАЗУ!!!
 
 
