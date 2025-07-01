@@ -14,7 +14,7 @@ https://console.yandex.cloud/folders/b1g4mt8s1172nelgi24u/storage/buckets
 # YC Identity and access management (1 раз)
 https://console.yandex.cloud/folders/b1g4mt8s1172nelgi24u/iam/service-accounts 
 Создать сервисный аккаунт без роли (единый для всех). Захожу в него, создать новый ключ => статический ключ доступа => скопировать СРАЗУ!!!
-Например: YCAJEaqquh9TjNqxsS_sWPZi6 и YCMNNegwPs5C-HB7GCuna4QIxEkw1Z0bHFOb5KnZ
+
 
 # YC Object Storage
 Далее вернуться в бакет Безопасность => Права доступа => Назначить роли (внизу) и дать права сервисному аккаунту – storage.uploader и storage.viewer
