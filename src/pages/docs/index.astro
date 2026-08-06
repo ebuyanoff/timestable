@@ -1,10 +1,10 @@
 ---
 import Layout_article from '../../layouts/Layout_article.astro'
-import Faq from '../../components/Faq.astro'
 ---
 
 <Layout_article
 title="Документы timestable"
+h1="Документы"
 description="Документы timestable"
 keywords="Документы"
 section="Правовые документы"
@@ -12,25 +12,31 @@ section_url="docs"
 >
 
 <div class="topdocs">
-	<div class="docswitcher active" data-doc="1">Политика конфиденциальности</div> | <div class="docswitcher" data-doc="2">Пользовательское соглашение</div>
+	<button type="button" class="docswitcher active" data-doc="1" aria-controls="1" aria-expanded="true">Политика конфиденциальности</button> |
+	<button type="button" class="docswitcher" data-doc="2" aria-controls="2" aria-expanded="false">Пользовательское соглашение</button>
 </div>
 
-<script type="text/javascript">
-$('.docswitcher').click(function() {
-  var docname = $(this).attr('data-doc');
-  $(".docswitcher").removeClass('active');
-   $(".docwrapper").removeClass('active');
-  $(this).addClass('active');
-  $('#'+docname).addClass('active');
+<script>
+document.querySelectorAll<HTMLElement>('.docswitcher').forEach((switcher) => {
+  switcher.addEventListener('click', () => {
+    document.querySelectorAll<HTMLElement>('.docswitcher').forEach((element) => {
+      element.classList.remove('active');
+      element.setAttribute('aria-expanded', 'false');
+    });
+    document.querySelectorAll('.docwrapper').forEach((element) => element.classList.remove('active'));
+    switcher.classList.add('active');
+    switcher.setAttribute('aria-expanded', 'true');
+    const documentId = switcher.dataset.doc;
+    if (documentId) document.getElementById(documentId)?.classList.add('active');
+  });
 });
-
 </script>
 
 
 <!--Политика конфиденциальности-->
 <div class="docwrapper active" id="1">
 
-<h1>Политика конфиденциальности</h1>
+<h2>Политика конфиденциальности</h2>
 <h2>1. Общие положения</h2>
 <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ &laquo;О персональных данных&raquo; (далее - Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые&nbsp;timestable&nbsp;(далее &ndash; Оператор).</p>
 <p>1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
@@ -152,7 +158,7 @@ $('.docswitcher').click(function() {
 <!--Пользовательское соглашение-->
 <div class="docwrapper" id="2">
 
-<h1>Пользовательское Соглашение</h1>
+<h2>Пользовательское соглашение</h2>
 <p>Настоящее Пользовательское Соглашение (Далее Соглашение) регулирует отношения между владельцем timestable.ru (далее timestable или Администрация) с одной стороны и пользователем сайта с другой. Сайт timestable не является средством массовой информации. Используя сайт, Вы соглашаетесь с условиями данного соглашения.</p>
 <p><strong>Если Вы не согласны с условиями данного соглашения, не используйте сайт timestable!</strong></p>
 <h2>Права и обязанности сторон</h2>

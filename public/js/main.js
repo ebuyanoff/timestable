@@ -1,47 +1,49 @@
-////////////////Плавный скрол по якорям
-$(document).ready(function() {
-  $("body").on('click', '[href*="#"]:not(.linknotanchor)', function(e) {
-    var fixed_offset = 20;
-    if (this.pathname === location.pathname && this.hash) {
-      $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 200);
-      e.preventDefault();
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  const fixedOffset = 20;
+  const scrollBehavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
+  document.body.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href*="#"]:not(.linknotanchor)');
+    if (!link || link.pathname !== window.location.pathname || !link.hash) return;
+
+    const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+    if (!target) return;
+
+    event.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - fixedOffset;
+    window.scrollTo({ top, behavior: scrollBehavior });
+    window.history.pushState(null, '', link.hash);
   });
-  if (window.location.hash) {
-    var fixed_offset = 20;
-    var hash = window.location.hash;
-    if (window.location.pathname === '/games/') {
-      $('html,body').animate({ scrollTop: $(hash).offset().top - fixed_offset }, 200);
-    }
-  }
-});
 
-////////////////9 точек верхнего меню
-document.querySelector('.toprightmenu').addEventListener('click', function() {
-  document.querySelector('.topmenu').classList.toggle('active');
-  var topOpen = document.querySelector('.topopen');
-  var topClose = document.querySelector('.topclose');
-  topOpen.style.display = topOpen.style.display === 'none' ? '' : 'none';
-  topClose.style.display = topClose.style.display === 'none' ? '' : 'none';
-});
+  const menuButton = document.querySelector('.toprightmenu');
+  menuButton?.addEventListener('click', () => {
+    const isOpen = document.querySelector('.topmenu')?.classList.toggle('active') ?? false;
+    const topOpen = document.querySelector('.topopen');
+    const topClose = document.querySelector('.topclose');
+    if (topOpen) topOpen.style.display = isOpen ? 'none' : '';
+    if (topClose) topClose.style.display = isOpen ? 'block' : 'none';
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  });
 
-// Открытие внешних ссылок в новой вкладке
-document.addEventListener('DOMContentLoaded', function() {
-  document.body.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A' && e.target.hostname && e.target.hostname !== window.location.hostname.replace(/^www\./, '')) {
-      e.target.target = '_blank';
-    }
+  document.querySelectorAll('a[href^="http"]').forEach((link) => {
+    if (link.hostname.replace(/^www\./, '') === window.location.hostname.replace(/^www\./, '')) return;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
+  document.querySelectorAll('.btnopen').forEach((button, index) => {
+    const answer = button.nextElementSibling;
+    if (!answer) return;
+
+    if (!answer.id) answer.id = `answer-${index + 1}`;
+    button.setAttribute('aria-controls', answer.id);
+    button.setAttribute('aria-expanded', String(answer.classList.contains('active')));
+
+    button.addEventListener('click', () => {
+      const isOpen = answer.classList.toggle('active');
+      button.setAttribute('aria-expanded', String(isOpen));
+      button.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
+    });
   });
 });
-
-
-// Раскрытие блока по кнопке ответ и плавный скролл к кнопке
-document.querySelectorAll('.btnopen').forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    this.nextElementSibling.classList.toggle('active');
-
-    // Плавный скролл к кнопке
-    this.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-

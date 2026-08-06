@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const MultiplicationTable = ({ yellowString, redCells = [] }: {yellowString: string, redCells: number[][] }) => {
   const [hoveredRow, setHoveredRow] = useState<number | null>(null);

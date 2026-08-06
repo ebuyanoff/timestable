@@ -1,0 +1,16 @@
+---
+import Calculator from '../../components/timestrainer';
+import LayoutArticle from '../../layouts/Layout_article.astro';
+---
+
+<LayoutArticle
+  title="Тренажёр умножения чисел от 10 до 20"
+  h1="Тренажёр умножения чисел от 10 до 20"
+  description="Онлайн-тренажёр для отработки умножения чисел от 10 до 20 с вариантами ответов."
+  section="Множители"
+  section_url="factor"
+  url="playmore10"
+>
+  <p>Выберите диапазон и решайте примеры онлайн. Тренажёр сразу покажет правильный ответ и предложит следующее задание.</p>
+  <Calculator client:load initialLang="ru" defaultMultipliers={[]} defaultStart={10} defaultEnd={20} />
+</LayoutArticle>

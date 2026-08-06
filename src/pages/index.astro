@@ -65,7 +65,7 @@ url=""
 
 
 
-<section class="articlewrap"><article temprop="articleBody">
+<section class="articlewrap"><article>
 	
 	<h2 id="1">🤖 <a href="/train/">Тренажёры и приложения</a></h2>
 	
@@ -271,126 +271,81 @@ url=""
 	
 	}
 </style >
-<script  type="text/javascript">
-	'use strict';
-	
-	var MultiplicationTable = function() {
-	  this.resultContainer = document.querySelector('.mt-results');
-	  this.tableData = [];
-	  this.highlightedCells = [];
-	
-	  this.createNewElement = function(el, className) {
-		var el = document.createElement(el);
-		el.classList.add(className);
-		return el;
-	  }
-	
-	  this.distributeCells = function(table) {
-		for (var row = 1; row < 11; row++) {
-		  var createRow = this.createNewElement('tr', 'mt-trow');
-		  var trow = [];
-		  for (var cell = 1; cell < 11; cell++) {
-			var createCell = this.createNewElement('td', 'mt-tcell');
-			var resultText = row * cell;
-			createCell.dataset.row = row;
-			createCell.dataset.cell = cell;
-			createCell.dataset.result = row * cell;
-			createCell.setAttribute('title', resultText);
-			createCell.innerHTML = row * cell;
-			createRow.appendChild(createCell);
-			trow.push(createCell);
-			if (cell === row) {
-			  createCell.classList.add('is-square');
+<script is:inline>
+	const container = document.querySelector('.mt-table-container');
+	const resultContainer = document.querySelector('.mt-results');
+
+	if (container && resultContainer) {
+		const tableData = [];
+		const highlightedCells = new Set();
+		const table = document.createElement('table');
+		table.className = 'mt-table';
+
+		for (let row = 1; row <= 10; row += 1) {
+			const tableRow = document.createElement('tr');
+			tableRow.className = 'mt-trow';
+			const rowCells = [];
+
+			for (let cell = 1; cell <= 10; cell += 1) {
+				const tableCell = document.createElement('td');
+				const result = row * cell;
+				tableCell.className = 'mt-tcell';
+				tableCell.dataset.row = String(row);
+				tableCell.dataset.cell = String(cell);
+				tableCell.title = String(result);
+				tableCell.textContent = String(result);
+				tableCell.tabIndex = 0;
+				if (cell === row) tableCell.classList.add('is-square');
+				tableRow.appendChild(tableCell);
+				rowCells.push(tableCell);
 			}
-		  }
-		  this.tableData.push(trow);
-		  table.appendChild(createRow);
+
+			tableData.push(rowCells);
+			table.appendChild(tableRow);
 		}
-	  }
-	
-	  this.createTable = function() {
-		var table = this.createNewElement('table', 'mt-table');
-		table.setAttribute('cellspacing', '0');
-		this.distributeCells(table);
-		return table;
-	  }
-	
-	  this.render = function() {
-		var container = document.querySelector('.mt-table-container');
-		container.appendChild(this.createTable());
-	  }
-	
-	  this.writeResult = function(row, cell) {
-		this.resultContainer.innerText = row + ' × ' + cell + ' = ' + row * cell;
-	  }
-	
-	  this.highlightCells = function(row, cell, el) {
-		var arrayList = this.tableData,
-		  rowNumber = row - 1,
-		  cellNumber = cell - 1,
-		  vertNum = arrayList[rowNumber][0],
-		  horizNum = arrayList[0][cellNumber];
-	
-		el.classList.add('is-result');
-		vertNum.classList.add('is-data');
-		horizNum.classList.add('is-data');
-		for (var i = 0; i < arrayList.length; i++) {
-		  if (i <= rowNumber) {
-			for (var j = 0; j < arrayList[i].length; j++) {
-			  if (j <= cellNumber) {
-				arrayList[i][j].classList.add('is-zone');
-				if (j === cellNumber || i === rowNumber) {
-				  arrayList[i][j].classList.add('is-zone-border');
+
+		const clearHighlight = () => {
+			for (const cell of highlightedCells) {
+				cell.classList.remove('is-zone', 'is-zone-border', 'is-result', 'is-data');
+			}
+			highlightedCells.clear();
+		};
+
+		const showResult = (target) => {
+			const row = Number(target.dataset.row);
+			const cell = Number(target.dataset.cell);
+			if (!row || !cell) return;
+
+			clearHighlight();
+			resultContainer.textContent = `${row} × ${cell} = ${row * cell}`;
+			target.classList.add('is-result');
+			tableData[row - 1][0].classList.add('is-data');
+			tableData[0][cell - 1].classList.add('is-data');
+
+			for (let rowIndex = 0; rowIndex < row; rowIndex += 1) {
+				for (let cellIndex = 0; cellIndex < tableData[rowIndex].length; cellIndex += 1) {
+					const currentCell = tableData[rowIndex][cellIndex];
+					if (cellIndex < cell) {
+						currentCell.classList.add('is-zone');
+						if (cellIndex === cell - 1 || rowIndex === row - 1) currentCell.classList.add('is-zone-border');
+					}
+					highlightedCells.add(currentCell);
 				}
-			  }
-			  this.highlightedCells.push(arrayList[i][j]);
 			}
-		  }
-		}
-	  }
-	
-	  this.dimCells = function() {
-		if (this.highlightedCells != 0) {
-		  for (var i = 0; i < this.highlightedCells.length; i++) {
-			this.highlightedCells[i].classList.remove('is-zone', 'is-zone-border', 'is-result', 'is-data');
-		  }
-		}
-	  }
-	
-	  this.parseCellData = function(row, cell, el) {
-		this.dimCells();
-		this.highlightCells(row, cell, el);
-	  }
-	
-	  this.displayResult = function(e) {
-		if (e.target.nodeName.toLowerCase() === 'td') {
-		  var row = e.target.dataset.row,
-			cell = e.target.dataset.cell;
-		  this.writeResult(row, cell);
-		  this.parseCellData(row, cell, e.target);
-		}
-	  }
-	
-	  this.hideResult = function() {
-		this.resultContainer.innerText = '';
-		this.dimCells();
-	  }
-	
-	  this.addEvents = function() {
-		var table = document.querySelector('.mt-table');
-		table.addEventListener('mouseover', this.displayResult.bind(this));
-		table.addEventListener('mouseout', this.hideResult.bind(this));
-	  }
-	
-	  this.init = function() {
-		this.render();
-		table.addEvents();
-	  }
-	};
-	
-	var table = new MultiplicationTable();
-	
-	table.init();
-	</script>
+		};
+
+		const handleCell = (event) => {
+			if (event.target instanceof HTMLElement && event.target.matches('.mt-tcell')) showResult(event.target);
+		};
+
+		table.addEventListener('mouseover', handleCell);
+		table.addEventListener('focusin', handleCell);
+		table.addEventListener('mouseleave', () => {
+			resultContainer.textContent = '';
+			clearHighlight();
+		});
+		container.appendChild(table);
+	}
+</script>
 
 </Layout_main>

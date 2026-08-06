@@ -1,3 +1,5 @@
 User-agent: *
-Sitemap: https://timestable.ru/sitemap.xml
+Allow: /
 Disallow: /*?
+
+Sitemap: https://timestable.ru/sitemap-index.xml

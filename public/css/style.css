@@ -10,8 +10,8 @@ html, body {margin:0; padding:0;}
 body {min-height:90vh; font-family: 'Open Sans', sans-serif; font-size: 17px; font-weight:400; line-height:140%;}
 h1, h2, h3 {font-family: "Montserrat", sans-serif;}
 a {-webkit-transition: all .2s ease-in; transition: all .2s ease-in; color:#0072c4;}
-iframe {max-width:100%;}
-img {max-width:100%;}
+iframe {max-width:100%; box-sizing:border-box;}
+img {max-width:100%; height:auto;}
 
 @media screen and (max-width: 800px) {
 body {font-size: 16px;}		
@@ -28,7 +28,7 @@ header {display:flex; justify-content: space-between; align-items:center; border
 header .logo {margin:0;}
 .topleft {line-height: 100%;}
 
-.toprightmenu {display:inline-block; vertical-align: middle; box-sizing:border-box; position:relative; z-index:14; cursor:pointer;  cursor:pointer; height:50px; width:50px; }
+.toprightmenu {display:inline-block; vertical-align: middle; box-sizing:border-box; position:relative; z-index:14; cursor:pointer; height:50px; width:50px; border:0; padding:0; background:transparent; }
 .toprightmenu .topclose, .toprightmenu .topopen {background-repeat:no-repeat; background-position: center center; background-size:36px; position:absolute;  top:0; right:5px; left:0; bottom:0; z-index:15; } 
 .toprightmenu .topclose {display:none; background-image: url(../images/0/icons/close.svg); position:fixed; top:auto; right:auto; left:auto; bottom:auto; height:50px; width:50px;}
 .toprightmenu .topopen { background-image: url(../images/0/icons/apps.svg);} 
@@ -105,7 +105,7 @@ section.top h1 {font-size:28px;}
 
 
 /*================== Статья ==========================*/
-section.articlewrap {padding: 10px 400px 50px 20px; margin:0 auto; min-height:86vh; max-width:1200px; background:transparent; text-align:left; position:relative; box-sizing: border-box;}
+.articlewrap {padding: 10px 400px 50px 20px; margin:0 auto; min-height:86vh; max-width:1200px; background:transparent; text-align:left; position:relative; box-sizing: border-box;}
 .fullwidtharticle {margin-right:-380px;}
 .halffullwidtharticle {margin-right:-200px;}
 .sidenote {position:absolute; right:20px; width:280px; font-size:65%; margin-top:15px; line-height:150%;}
@@ -113,15 +113,16 @@ section.articlewrap {padding: 10px 400px 50px 20px; margin:0 auto; min-height:86
 .sidenote p {margin: 0 0 10px;}
 
 .topdocs {padding:0 0 20px; margin:0 0 20px; min-height:auto; color:rgba(0,0,0,0.1);}
-.docswitcher {display:inline-block; padding:0px; margin: 0 10px; border-bottom:1px dotted; color:blue; cursor:pointer;}
+.docswitcher {appearance:none; display:inline-block; padding:0; margin:0 10px; border:0; border-bottom:1px dotted; background:transparent; color:blue; font:inherit; cursor:pointer;}
 .docswitcher:hover {color:darkred;}
 .docswitcher.active, .docswitcher.active:hover {border:none; color:rgba(0,0,0,0.5); cursor:default;}
+.docswitcher:focus-visible {outline:2px solid rgb(0 114 196 / 45%); outline-offset:4px;}
 
 .docwrapper {display:none;}
 .docwrapper.active {display:block;}
 
 @media screen and (max-width: 800px) {
-section.articlewrap { margin: 0px auto 50px; padding:10px 15px;}
+.articlewrap { margin: 0px auto 50px; padding:10px 15px;}
 .fullwidtharticle, .halffullwidtharticle {margin-right:0;}
 .sidenote {position:static; margin:15px -15px; padding:15px; background:whitesmoke; width:100%; font-size:100%;}
 .sidenote.sidenoback {background:none;}
@@ -166,8 +167,9 @@ h2 a {text-decoration:none; color:black;}
 .videowrap:before{ content: "";  display: block;  padding-top:56%; }
 .videowrap iframe {display:block; position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%;}
 
-.btnopen {display:inline-block;  font-weight:500; text-decoration:none; box-shadow:0 0 15px rgba(0,0,0,0.1); border-radius:10px; padding:10px 30px; margin:25px 0 10px;  font-size:18px; min-width:150px; text-align:center; box-sizing:border-box; cursor:pointer; background: #0094ff; color:white;}
+.btnopen {appearance:none; display:inline-block; border:0; font:inherit; font-weight:500; line-height:inherit; text-decoration:none; box-shadow:0 0 15px rgba(0,0,0,0.1); border-radius:10px; padding:10px 30px; margin:25px 0 10px; font-size:18px; min-width:150px; text-align:center; box-sizing:border-box; cursor:pointer; background:#0094ff; color:white;}
 .btnopen:hover {box-shadow:0 0 25px rgba(0,0,0,0.2); background: #0880d8; color:white; }
+.btnopen:focus-visible {outline:3px solid rgb(0 114 196 / 35%); outline-offset:3px;}
 .btnopen, .btnopen:hover {-webkit-transition: all .2s ease-in; transition: all .2s ease-in;}
 .blockopen {display:none;}
 .blockopen.active {display:block; padding:25px 25px; margin:15px 0 25px; background:rgba(0,30,70,0.04); border-radius:4px;}
@@ -269,7 +271,8 @@ input::placeholder,textarea::placeholder {color: #c7c7c7; opacity: 1;	font-weigh
 .select select { position: relative;  background:transparent; padding-right: 25px;  -webkit-appearance: none;  -moz-appearance: none;  appearance: none; z-index:2; overflow:hidden; margin:0;}
 
 /*Тесты*/
-.flexquize {position: relative; max-width: 800px;  box-shadow: 0 0 30px rgb(0 30 50 / 8%);  margin: 30px auto;  border-radius: 12px;  min-height: 200px; font-family: 'Open Sans', sans-serif; text-align:center;}
+.visually-hidden {position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); white-space:nowrap; border:0;}
+.flexquize {position:relative; max-width:800px; width:100%; background:white; box-shadow:0 0 30px rgb(0 0 0 / 10%); margin:10px auto; border-radius:20px; min-height:200px; font-family:'Open Sans', sans-serif; text-align:center;}
 .flexquizequest {padding:40px 5% 20px; font-size:24px; font-weight: bold; text-align:left;}
 .flexquizanswer {width:calc(90%); box-sizing: border-box; padding:15px 4%; margin:2px 5%; border:none; text-align:left; border-radius: 8px; cursor:pointer; background:rgba(245, 245, 245, 0.5); font-size:18px;}
 .flexquizanswer:hover {background:rgba(245, 245, 245, 0.75);}
@@ -279,21 +282,28 @@ input::placeholder,textarea::placeholder {color: #c7c7c7; opacity: 1;	font-weigh
 
 /*Тренажёр умножения*/
 #flexquizetop {display:flex; align-items:center; justify-content:center; padding:10px;}
-#flexquizetop label, #flexquizetop input, #flexquizetop select {display:block; padding:8px; margin:0; width:60px; color: gray; }
-#flexquizetop label {padding:10px 0px; text-align:right; width:auto;}
+#flexquizetop label, #flexquizetop input, #flexquizetop select {display:block; padding:8px; margin:0; width:62px; font-size:16px; color:gray;}
+#flexquizetop label {padding:10px 0; text-align:right; width:auto;}
+#flexquizetop input[type="number"] {-moz-appearance:textfield; appearance:textfield;}
+#flexquizetop input[type="number"]::-webkit-inner-spin-button,
+#flexquizetop input[type="number"]::-webkit-outer-spin-button {-webkit-appearance:none; margin:0;}
 .primer {padding:0 30px 30px; }
 .primertitle {line-height:100%; font-size:50px; padding:20px; font-weight:600;}
 .primeroptions {display:flex; align-items:center; justify-content:center; flex-wrap: wrap;}
-.primeroption {line-height:100%; cursor:pointer; display: block;  padding: 28px 20px; margin: 3px 3px; width:23%; font-size: 25px; font-family: "Montserrat", sans-serif; font-weight: 700; border-radius: 10px; text-align: center;  background: rgba(0,0,0,0.04);  box-sizing: border-box;}
-.ifoflex {padding:20px; display:block; padding: 25px 10px; border-radius: 0 0 12px 12px; font-size: 24px; color: gray; }
+.primeroption {appearance:none; line-height:100%; cursor:pointer; display:block; padding:28px 20px; margin:3px; width:23%; font-size:25px; font-family:"Montserrat", sans-serif; font-weight:700; color:rgb(15 20 25); border:0; border-radius:10px; text-align:center; background:rgba(0,0,0,0.04); box-sizing:border-box;}
+.primeroption:not(:disabled):hover {background:rgba(0,0,0,0.08);}
+.primeroption:focus-visible {outline:3px solid rgb(55 125 190 / 35%); outline-offset:1px;}
+.primeroption:disabled {cursor:default; opacity:1;}
+.ifoflex {appearance:none; display:block; width:100%; margin:0; padding:25px 10px; border:0; border-radius:0 0 20px 20px; font:inherit; font-size:24px; text-align:center; color:gray; background:transparent; box-sizing:border-box;}
 #nextone { background: rgba(0,100,250,0.9); color:white;  cursor:pointer;}
+#nextone:hover {background:rgb(0 82 215);}
+#nextone:focus-visible {outline:3px solid rgb(0 82 215 / 35%); outline-offset:-5px;}
 .alertmultinfo {font-size:20px; padding:35px 10px;}
-#flexquizetop #firstmult {width:43px; color: gray; padding:2px; min-height:0; background:rgba(245, 245, 245, 0.0); margin:0 0 0 5px; text-align: center;}
-#flexquizetop #firstmult:hover {background:rgba(245, 245, 245, 0.5);}
 .incorrect  {color:rgb(225, 5, 5);}
 .correct {background:rgb(122, 231, 149);}
 
 @media screen and (max-width: 800px) {
+.flexquize {margin-bottom:100px;}
 .primer {padding:20px;}
 .primertitle {font-size:36px; margin-bottom: 15px;}
 .primeroption {width:48%;  padding: 20px 6px; font-size: 20px;}	

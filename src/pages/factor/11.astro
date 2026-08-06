@@ -47,7 +47,31 @@ img="11.png"
 
 <h2>Как умножать на 11 числа от 10 до 99?</h2>
 
-<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@evgeny.buyanov/video/7059734493631909122" data-video-id="7059734493631909122" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@evgeny.buyanov" href="https://www.tiktok.com/@evgeny.buyanov?refer=embed">@evgeny.buyanov</a> Умножение на 11. Полная версия <a title="математика" target="_blank" href="https://www.tiktok.com/tag/%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0?refer=embed">#математика</a> <a title="математикалегко" target="_blank" href="https://www.tiktok.com/tag/%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%D0%BB%D0%B5%D0%B3%D0%BA%D0%BE?refer=embed">#математикалегко</a> <a title="урокдня" target="_blank" href="https://www.tiktok.com/tag/%D1%83%D1%80%D0%BE%D0%BA%D0%B4%D0%BD%D1%8F?refer=embed">#урокдня</a> <a title="устныйсчет" target="_blank" href="https://www.tiktok.com/tag/%D1%83%D1%81%D1%82%D0%BD%D1%8B%D0%B9%D1%81%D1%87%D0%B5%D1%82?refer=embed">#устныйсчет</a> <a title="образование" target="_blank" href="https://www.tiktok.com/tag/%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5?refer=embed">#образование</a> <a title="считаем" target="_blank" href="https://www.tiktok.com/tag/%D1%81%D1%87%D0%B8%D1%82%D0%B0%D0%B5%D0%BC?refer=embed">#считаем</a> <a target="_blank" title="♬ Магия - Greeceee" href="https://www.tiktok.com/music/Магия-6731477890606565378?refer=embed">♬ Магия - Greeceee</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@evgeny.buyanov/video/7059734493631909122" data-video-id="7059734493631909122" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@evgeny.buyanov" href="https://www.tiktok.com/@evgeny.buyanov?refer=embed">@evgeny.buyanov</a> Умножение на 11. Полная версия <a title="математика" target="_blank" href="https://www.tiktok.com/tag/%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0?refer=embed">#математика</a> <a title="математикалегко" target="_blank" href="https://www.tiktok.com/tag/%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%D0%BB%D0%B5%D0%B3%D0%BA%D0%BE?refer=embed">#математикалегко</a> <a title="урокдня" target="_blank" href="https://www.tiktok.com/tag/%D1%83%D1%80%D0%BE%D0%BA%D0%B4%D0%BD%D1%8F?refer=embed">#урокдня</a> <a title="устныйсчет" target="_blank" href="https://www.tiktok.com/tag/%D1%83%D1%81%D1%82%D0%BD%D1%8B%D0%B9%D1%81%D1%87%D0%B5%D1%82?refer=embed">#устныйсчет</a> <a title="образование" target="_blank" href="https://www.tiktok.com/tag/%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5?refer=embed">#образование</a> <a title="считаем" target="_blank" href="https://www.tiktok.com/tag/%D1%81%D1%87%D0%B8%D1%82%D0%B0%D0%B5%D0%BC?refer=embed">#считаем</a> <a target="_blank" title="♬ Магия - Greeceee" href="https://www.tiktok.com/music/Магия-6731477890606565378?refer=embed">♬ Магия - Greeceee</a> </section> </blockquote>
+
+<script>
+const tiktokEmbed = document.querySelector('.tiktok-embed');
+
+const loadTikTokEmbed = () => {
+  if (document.querySelector('script[data-tiktok-embed]')) return;
+  const script = document.createElement('script');
+  script.src = 'https://www.tiktok.com/embed.js';
+  script.async = true;
+  script.dataset.tiktokEmbed = 'true';
+  document.head.appendChild(script);
+};
+
+if (tiktokEmbed && 'IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    observer.disconnect();
+    loadTikTokEmbed();
+  }, { rootMargin: '500px 0px' });
+  observer.observe(tiktokEmbed);
+} else if (tiktokEmbed) {
+  loadTikTokEmbed();
+}
+</script>
 
 <p>Существует простой способ умножения на 11 числе от 10 до 99.</p>
 
