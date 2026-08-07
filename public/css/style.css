@@ -29,8 +29,8 @@ header .logo {margin:0;}
 .topleft {line-height: 100%;}
 
 .toprightmenu {display:inline-block; vertical-align: middle; box-sizing:border-box; position:relative; z-index:14; cursor:pointer; height:50px; width:50px; border:0; padding:0; background:transparent; }
-.toprightmenu .topclose, .toprightmenu .topopen {background-repeat:no-repeat; background-position: center center; background-size:36px; position:absolute;  top:0; right:5px; left:0; bottom:0; z-index:15; } 
-.toprightmenu .topclose {display:none; background-image: url(../images/0/icons/close.svg); position:fixed; top:auto; right:auto; left:auto; bottom:auto; height:50px; width:50px;}
+.toprightmenu .topclose, .toprightmenu .topopen {background-repeat:no-repeat; background-position:center; background-size:36px; position:absolute; inset:0; z-index:15;}
+.toprightmenu .topclose {display:none; background-image:url(../images/0/icons/close.svg);}
 .toprightmenu .topopen { background-image: url(../images/0/icons/apps.svg);} 
 
 .topmenu {display:none; }
